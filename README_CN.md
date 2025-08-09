@@ -1,4 +1,4 @@
-# WePadBridge
+# 手机企业微信平板登录/WePadBridge
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Android](https://img.shields.io/badge/Android-5.0%2B-green.svg)](https://android.com)
@@ -92,4 +92,5 @@
 
 
 **注意**: 本模块仅适用于企业微信，不支持个人微信。
+
 
