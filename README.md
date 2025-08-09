@@ -1,96 +1,97 @@
-# WePadBridge
+# 手机企业微信平板登录/WePadBridge
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Android](https://img.shields.io/badge/Android-5.0%2B-green.svg)](https://android.com)
 [![Xposed](https://img.shields.io/badge/Xposed-LSPosed-blue.svg)](https://github.com/LSPosed/LSPosed)
 
-[中文文档](README_CN.md) | English
+中文文档 | [English](README_EN.md)
 
-An Xposed module that enables tablet interface and features in WeChat Work mobile app.
+一个让企业微信手机版伪装成平板进行扫码登录的 Xposed 模块。
 
-## 📱 Features
+## 📱 功能特性
 
-- **Device Type Spoofing**: Modifies device type detection to tablet
-- **Tablet Interface**: Enables tablet-optimized UI layout in WeChat Work
-- **Multi-Class Support**: Hooks multiple detection methods for comprehensive coverage
-- **Debug Logging**: Built-in logging for troubleshooting
-- **Lightweight**: Minimal performance impact
+- **设备类型伪装**: 修改设备类型检测为平板设备
+- **平板界面**: 启用企业微信的平板优化UI布局
+- **多类支持**: Hook多个检测方法，确保全面覆盖
+- **调试日志**: 内置日志功能，便于问题排查
+- **轻量级**: 对性能影响极小
 
-## 🛠️ Requirements
+## 🛠️ 使用要求
 
-- Rooted Android device (Android 5.0+)
-- Xposed Framework (LSPosed recommended)
-- WeChat Work app installed
+- 已Root的Android设备 (Android 5.0+)
+- Xposed框架 (推荐使用LSPosed)
+- 已安装企业微信应用
 
-## 📦 Installation
+## 📦 安装方法
 
-1. Download the latest APK from [Releases](../../releases)
-2. Install the APK on your device
-3. Activate the module in LSPosed Manager
-4. Enable the module scope for WeChat Work
-5. Restart WeChat Work
+1. 从 [Releases](../../releases) 下载最新APK文件
+2. 在设备上安装APK
+3. 在LSPosed管理器中激活模块
+4. 为企业微信启用模块作用域
+5. 重启企业微信
 
-## 🎯 Usage
+## 🎯 使用说明
 
-Once activated, WeChat Work will automatically display the tablet interface with:
-- Optimized layout for larger screens
-- Tablet-specific UI elements
-- Enhanced navigation experience
+激活后，企业微信将自动显示平板登录界面，可以使用另外一个企业微信扫码登录。
 
-## 🔧 Technical Details
+## 🔧 技术细节
 
-### Hooked Methods
-- `getDeviceTypeFromLocal()` - Device type detection
-- `isAndroidPad()` - Tablet mode verification
+### Hook的方法
+- `getDeviceTypeFromLocal()` - 设备类型检测
+- `isAndroidPad()` - 平板模式验证
 
-### Supported Classes
-- Application class tablet detection
-- WeworkServiceImpl class tablet detection
+### 支持的类
+- Application类平板检测
+- WeworkServiceImpl类平板检测
 
-### Built With
-- [YukiHookAPI](https://github.com/HighCapable/YukiHookAPI) - Modern Xposed API
-- [KavaRef](https://github.com/HighCapable/KavaRef) - Reflection library
-- Kotlin - Primary development language
+### 技术栈
+- [YukiHookAPI](https://github.com/HighCapable/YukiHookAPI) - 现代化Xposed API
+- [KavaRef](https://github.com/HighCapable/KavaRef) - 反射库
+- Kotlin - 主要开发语言
 
-## 📱 Compatibility
+## 📱 兼容性
 
-| Android Version | WeChat Work | Status |
-|----------------|-------------|--------|
-| 5.0 - 6.0      | 4.0.0+     | ✅ Tested |
-| 7.0 - 10.0     | 4.0.0+     | ✅ Tested |
-| 11.0 - 14.0    | 4.0.0+     | ✅ Tested |
+| Android版本 | 企业微信版本 | 状态 |
+|------------|------------|------|
+| 5.0 - 6.0  | 4.0.0+     | ✅ 已测试 |
+| 7.0 - 10.0 | 4.0.0+     | ✅ 已测试 |
+| 11.0 - 14.0| 4.0.0+     | ✅ 已测试 |
 
-## 🐛 Troubleshooting
+## 🐛 问题排查
 
-### Module Not Working
-1. Ensure LSPosed is properly installed
-2. Check if the module is activated
-3. Verify WeChat Work is in the module scope
-4. Restart WeChat Work after activation
+### 模块不生效
+1. 确保LSPosed正确安装
+2. 检查模块是否已激活
+3. 验证企业微信是否在模块作用域内
+4. 激活后重启企业微信
 
-### Interface Issues
-1. Clear WeChat Work app data
-2. Reinstall the module
-3. Check logs in LSPosed Manager
+### 界面问题
+1. 清除企业微信应用数据
+2. 重新安装模块
+3. 在LSPosed管理器中查看日志
 
-## 📄 License
+## 📄 开源协议
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+本项目采用 MIT 协议 - 查看 [LICENSE](LICENSE) 文件了解详情。
 
-## 🤝 Contributing
+## 🤝 贡献代码
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+欢迎贡献代码！请随时提交 Pull Request。
 
-## ⚠️ Disclaimer
+## ⚠️ 免责声明
 
-This module is for educational and research purposes only. Use at your own risk. The developer is not responsible for any damage or issues caused by using this module.
+本模块仅供教育和研究目的使用，使用风险自负。开发者不对使用本模块造成的任何损害或问题负责。
 
-## 📞 Support
+## 📞 支持
 
-- Create an [Issue](../../issues) for bug reports
-- Star ⭐ this repository if you find it useful
-- Follow for updates
+- 创建 [Issue](../../issues) 报告bug
+- 如果觉得有用请给个 ⭐ Star
+- 关注获取更新
 
 ---
 
-**Note**: This module only works with WeChat Work (Enterprise WeChat), not the regular WeChat app.
+
+**注意**: 本模块仅适用于企业微信，不支持个人微信。
+
+
+
